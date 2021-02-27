@@ -1,0 +1,39 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+}
+
+#bookinfo{
+
+}
+
+.container{
+  width: 90%;
+  padding: .5rem;
+}
+
+.bookcontainer{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.book{
+  padding: 1rem;
+  margin: .25rem;
+}
+
+nav ul{
+  display: flex;
+}
+
+nav ul li{
+  list-style: none;
+}
+
+nav ul li a{
+  margin-right: 1rem;
+}

@@ -1,0 +1,49 @@
+<h3>Tambah Buku</h3>
+
+<form action="/book" method="POST">
+
+  <div>
+    <label>Judul Buku: </label>
+    <input type="text" name="judul"> <span>* wajib diisi</span>
+  </div>
+
+  <br />
+
+  <div>
+    <label>Kategori: </label>
+    <select name="kategori" value="<%= categories[0].id %>">
+      <% categories.forEach(cat => { %>
+        <option value="<%= cat.id %>"><%= cat.name %></option>
+      <% }) %>
+    </select>
+  </div>
+
+  <br />
+
+  <div>
+    <label>Stok: </label>
+    <input type="number" name="stok">
+  </div>
+
+  <br />
+
+  <div>
+    <label>Gambar (URL): </label>
+    <input type="text" name="gambar">
+    <a href="https://www.gramedia.com/categories/buku/non-fiksi/bisnis-ekonomi" target="_blank">Referensi Gambar</a>
+  </div>
+
+  <br />
+
+  <div>
+    <label>Deskripsi: </label>
+    <textarea name="deskripsi" cols='40' row'5></textarea>
+  </div>
+
+  <br />
+
+  <div>
+    <button>Tambah</button>
+  </div>
+
+</form>

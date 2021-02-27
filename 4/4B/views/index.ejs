@@ -1,0 +1,28 @@
+<h3>Daftar Buku</h3>
+
+<h4>Category: </h4>
+<form action="/" method="get">
+  <select name="category" onchange="this.form.submit()">
+    <option>Pilih satu: </option>
+    <% categories.forEach(cat => { %>
+      <option value="<%= cat.id %>"><%= cat.name %></option>
+    <% }) %>
+  </select>
+
+</form>
+
+<%if(books.length > 0) { %>
+  <div class="bookcontainer">
+  <% books.forEach(book => { %>
+    <div class="book">
+      <div>
+        <img src="<%= book.image %>" >
+      </div>
+      <div id="bookinfo">
+        <div><%= book.name %></div>
+        <div>Stock: <%= book.stok %></div>
+      </div>
+    </div>
+  <% }) %>
+  </div>
+<% } %>
