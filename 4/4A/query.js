@@ -12,6 +12,7 @@ let con = mysql.createConnection({
 
 
 //poin1
+
 // con.connect(function(err){
 //   if(err) throw err;
 //   con.query(`select * from books`, function(err, res){
@@ -22,6 +23,7 @@ let con = mysql.createConnection({
 
 
 //poin2
+
 // con.connect(function(err){
 //   if(err) throw err;
 //   let sql = `select c.name kategori, b.name judul_buku, b.stok from categories c
@@ -45,42 +47,43 @@ let con = mysql.createConnection({
 
 
 //poin3
-// con.connect(function(err){
-//   if(err) throw err;
-//
-//   let sql = `select * from books where id = 2`
-//
-//   con.query(sql, function(err, res){
-//     if(err) throw err
-//     console.log(res)
-//   })
-// })
 
-
-//poin4
 con.connect(function(err){
   if(err) throw err;
 
-    let sql = `insert into categories (name) values ('kamus'), ('komputer')`;
+  let sql = `select * from books where id = 2`
 
-    con.query(sql, function(err, res){
-      if(err) throw err;
-      console.log('records inserted to categories table')
-    })
-
-    sql = `insert into books (name, stok, image, category_id)
-    values ('kamus prancis', 10, 'https://cdn.gramedia.com/uploads/items/img20200721_14541889__w149_hauto.jpg', 1),
-    ('kamus jerman', 12, 'https://cdn.gramedia.com/uploads/items/img20200622_12275884__w149_hauto.jpg', 1),
-    ('tips dan trik fungsi dan formula ms excel', 30, 'https://cdn.gramedia.com/uploads/items/9786230022067_Cover_Tip_dan_Trik_Fungsi_dan_Formula_MS_Excel__w149_hauto.jpg', 2),
-    ('permograman sql server 2019', 20, 'https://cdn.gramedia.com/uploads/items/9786230024184_Cover_Pemrograman_SQL_Server_2019__w149_hauto.jpg', 2)`;
-
-    con.query(sql, function(err, res){
-      if(err) throw err;
-      console.log('records inserted to books table')
-    })
-
-  con.query(sql)
+  con.query(sql, function(err, res){
+    if(err) throw err
+    console.log(res)
+  })
 })
+
+
+//poin4
+
+// con.connect(function(err){
+//   if(err) throw err;
+//
+//     let sql = `insert into categories (name) values ('kamus'), ('komputer')`;
+//
+//     con.query(sql, function(err, res){
+//       if(err) throw err;
+//       console.log('records inserted to categories table')
+//     })
+//
+//     sql = `insert into books (name, stok, image, category_id)
+//     values ('kamus prancis', 10, 'https://cdn.gramedia.com/uploads/items/img20200721_14541889__w149_hauto.jpg', 1),
+//     ('kamus jerman', 12, 'https://cdn.gramedia.com/uploads/items/img20200622_12275884__w149_hauto.jpg', 1),
+//     ('tips dan trik fungsi dan formula ms excel', 30, 'https://cdn.gramedia.com/uploads/items/9786230022067_Cover_Tip_dan_Trik_Fungsi_dan_Formula_MS_Excel__w149_hauto.jpg', 2),
+//     ('permograman sql server 2019', 20, 'https://cdn.gramedia.com/uploads/items/9786230024184_Cover_Pemrograman_SQL_Server_2019__w149_hauto.jpg', 2)`;
+//
+//     con.query(sql, function(err, res){
+//       if(err) throw err;
+//       console.log('records inserted to books table')
+//     })
+//
+// })
 
 
 
@@ -101,7 +104,8 @@ con.connect(function(err){
 
 // })
 
-//Buat Tabel Categories & Books
+// Buat Tabel Categories & Books
+
 // con.connect(function(err){
 //   if(err) throw err;
 //   console.log('Connected to DB');
